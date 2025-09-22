@@ -3,7 +3,7 @@ name: Test Secrets Workflow
 on: 
   push:   # 只要 push 就触发
     branches:
-      - main   # 或者你自己的分支名，比如 master
+      - master   # 或者你自己的分支名，比如 master
 
 jobs:
   test-secrets:
