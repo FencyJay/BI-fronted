@@ -1,0 +1,16 @@
+name: Test Secrets Workflow
+
+on: 
+  push:   # 只要 push 就触发
+    branches:
+      - main   # 或者你自己的分支名，比如 master
+
+jobs:
+  test-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Print secret
+        run: echo "My secret is: ${{ secrets.MY_SECRET }}"
